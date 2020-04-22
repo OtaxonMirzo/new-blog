@@ -13,7 +13,15 @@ class NewMigration extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('table', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('short');
+            $table->string('view');
+            $table->string('image');
+            $table->integer('look');
+            $table->integer('user');
+            $table->timestamps();
+        });
     }
 
     /**

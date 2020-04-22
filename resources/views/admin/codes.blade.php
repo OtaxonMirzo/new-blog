@@ -1,4 +1,4 @@
-@extends('../layouts/app', ['title' => 'codes'])
+@extends('layouts/admin', ['title' => 'codes'])
 @section('content')
 			<div id="page-wrapper">
 				<div class="graphs">
