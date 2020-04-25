@@ -15,7 +15,7 @@ Route::get('/about', 'CiteController@about') -> name('about');
 Route::get('/services', 'CiteController@services') -> name('services');
 Route::get('/contact', 'CiteController@contact') -> name('contact');
 Route::get('/musics', 'CiteController@musics') -> name('musics');
-Route::get('/more', 'CiteController@more') -> name('more');
+Route::get('/musicsmore/{id}', 'CiteController@musicsmore') -> name('musicsmore');
 Route::get('/admin/home', 'NewController@admin') -> name('admin');
 Route::get('/admin/grids', 'NewController@grids') -> name('grids');
 Route::get('/admin/forms', 'NewController@forms') -> name('forms');
@@ -29,6 +29,6 @@ Route::get('/admin/media', 'NewController@media') -> name('media');
 Route::get('/admin/inbox', 'NewController@inbox') -> name('inbox');
 Route::get('/admin/sign_in', 'NewController@sign_in') -> name('sign_in');
 Route::get('/admin/sign_up', 'NewController@sign_up') -> name('sign_up');
-Route::prefix('admin')->group(function(){
-    Route::resource('musics', 'Admin\MusicsController');
+Route::namespace('Admin')->name('admin.')->prefix('admin')->group(function(){
+    Route::resource('musics', 'MusicsController');
 });

@@ -8,5 +8,5 @@ class Music extends Model
 {
     public $table = "musics";
 
-    public $fillable = ['singer', 'name', 'lyric', 'image', 'duration', 'size', 'genre'];
+    public $fillable = ['singer', 'name', 'lyric', 'duration', 'size', 'genre'];
 }

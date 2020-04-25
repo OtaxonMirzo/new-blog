@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Music;
 
 class CiteController extends Controller
 {
@@ -22,12 +23,14 @@ class CiteController extends Controller
     {
         return view('contact');
     }
-    public function more()
+    public function musicsmore($id)
     {
-        return view('more');
+        $musics = Music::findOrFail($id);
+        return view('musicsmore', compact('musics'));
     }
     public function musics()
     {
-        return view('musics');
+        $musics = Music::all();
+        return view('musics', compact('musics'));
     }
 }

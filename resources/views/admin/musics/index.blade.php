@@ -3,9 +3,19 @@
 <div style="margin: 50px" class="bs-example4 m-50" data-example-id="contextual-table">
     <h3 class="dark"> 
         Musiqalar 
-        <a href="{{ route('musics.create') }}" class="btn btn-primary float-right"> Yaratish </a>
+        <a href="{{ route('admin.musics.create') }}" class="btn btn-primary float-right"> Yaratish </a>
     </h3>
-    <table class="table">
+    <table class="table table-bordered">
+        @if (session()->has('success'))
+            <div class="alert alert-success">
+                {{ session()->get('success')}}
+            </div>
+        @endif
+        @if (session()->has('delete'))
+            <div class="alert alert-danger">
+                {{ session()->get('delete')}}
+            </div>
+        @endif
         <thead>
             <tr>
                 <th> Ijrochi </th>
@@ -21,11 +31,14 @@
                     <td> {{ $music->name }} </td>
                     <td> {{ $music->duration }} </td>
                     <td>
-                        <a class="btn btn-primary" href="{{ route('musics.edit', ['id' => $music->id]) }}"> O'zgartirish </a>
-                        <form method="POST" action="{{ route('musics.destroy', ['id' => $music->id]) }}">
+                        <a href="{{route('admin.musics.show', $music->id)}}" class="btn btn-sm btn-info text-white float-left"> <i class="fa fa-eye" aria-hidden="true"></i> </a>
+                        <a class="btn btn-sm btn-default float-left" href="{{ route('admin.musics.edit', ['id' => $music->id]) }}">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                        </a>
+                        <form method="POST" action="{{ route('admin.musics.destroy', ['id' => $music->id]) }}">
                             @csrf
                             @method('delete')
-                            <button type="submit" class="btn btn-dark"> O'chirish </button>
+                            <button type="submit" class="btn btn-sm btn-danger"> <i class="fa fa-trash-o" aria-hidden="true"></i> </button>
                         </form>
                     </td>
                 </tr>

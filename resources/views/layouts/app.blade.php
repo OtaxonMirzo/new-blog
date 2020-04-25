@@ -1,9 +1,3 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html lang="zxx">
 
@@ -23,11 +17,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		}
 	</script>
 	<!-- Bootstrap Core CSS -->
-	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
 	<!-- Custom CSS -->
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href="/css/style.css" rel='stylesheet' type='text/css' />
 	<!-- font-awesome icons -->
-	<link href="css/fontawesome-all.min.css" rel="stylesheet">
+	<link href="/css/fontawesome-all.min.css" rel="stylesheet">
 	<!-- //Custom Theme files -->
 	<!--webfonts-->
 	<link href="//fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
@@ -78,9 +72,6 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						<li class="nav-item  mr-3">
 							<a class="nav-link scroll" href="{{ route('about') }}">about</a>
 						</li>
-						<li class="nav-item dropdown mr-3">
-							<a class="nav-link scroll" href="{{ route('more') }}">More</a>
-						</li>
 						<li class="nav-item">
 							<a class="nav-link scroll" href="{{ route('contact') }}">contact</a>
 						</li>
@@ -96,17 +87,17 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 @yield('content')
 	<!-- copyright -->
 	<div class="cpy-right text-center">
-		<p>© 2018 Music Buzz. All rights reserved | Design by
-			<a href="http://w3layouts.com"> W3layouts.</a>
+		<p>
+			Contact with we: +998943120066
 		</p>
 	</div>
 	<!-- //copyright -->
 	<!-- js-->
-	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="/js/jquery-2.2.3.min.js"></script>
 	<!-- js-->
 	<!-- start-smooth-scrolling -->
-	<script src="js/move-top.js "></script>
-	<script src="js/easing.js "></script>
+	<script src="/js/move-top.js "></script>
+	<script src="/js/easing.js "></script>
 	<script>
 		jQuery(document).ready(function ($) {
 			$(".scroll ").click(function (event) {
@@ -137,10 +128,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 
 		});
 	</script>
-	<script src="js/SmoothScroll.min.js "></script>
+	<script src="/js/SmoothScroll.min.js "></script>
 	<!-- //smooth-scrolling-of-move-up -->
 	<!-- Bootstrap Core JavaScript -->
-	<script src="js/bootstrap.js">
+	<script src="/js/bootstrap.js">
 	</script>
 	<!-- //Bootstrap Core JavaScript -->
 </body>

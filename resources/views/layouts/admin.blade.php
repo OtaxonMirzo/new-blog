@@ -1,9 +1,3 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -13,6 +7,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="keywords" content="Easy Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Bootstrap CSS -->
+<link href="/admin/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Bootstrap Core CSS -->
 <link href="/admin/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 <!-- Custom CSS -->

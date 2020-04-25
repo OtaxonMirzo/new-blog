@@ -38,7 +38,7 @@ class MusicsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'singer' => 'reqiared',
+            'singer' => 'required',
             'name' => 'required',
             'duration' => 'required',
             'size' => 'required',
@@ -48,7 +48,7 @@ class MusicsController extends Controller
 
         Music::create($request->post());
 
-        return redirect()->to('musics.index');
+        return redirect()->to('admin/musics') -> with('success', 'Yangi musiqa yaratildi!');
     }
 
     /**
@@ -59,7 +59,9 @@ class MusicsController extends Controller
      */
     public function show($id)
     {
-        //
+        $musics = Music::findOrFail($id);
+
+        return view('admin.musics.show', compact('musics'));
     }
 
     /**
@@ -70,7 +72,9 @@ class MusicsController extends Controller
      */
     public function edit($id)
     {
-        return $id;
+        $music = Music::findOrFail($id);
+
+        return view('admin.musics.edit', compact('music'));
     }
 
     /**
@@ -82,7 +86,27 @@ class MusicsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $musics = Music::findOrFail($id);
+
+        $request->validate([
+            'singer' => 'required',
+            'name' => 'required',
+            'duration' => 'required',
+            'size' => 'required',
+            'lyric' => 'required',
+            'genre' => 'required',
+        ]);
+
+        $musics->update([
+            'singer' => $request->post('singer'),
+            'name' => $request->post('name'),
+            'duration' => $request->post('duration'),
+            'size' => $request->post('size'),
+            'lyric' => $request->post('lyric'),
+            'genre' => $request->post('genre'),
+        ]);
+
+        return redirect()->route('admin.musics.index') -> with('success', 'Musiqa ozgartirildi!');
     }
 
     /**
@@ -93,6 +117,10 @@ class MusicsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $metod = Music::findOrFail($id);
+
+        $metod->delete();
+
+        return redirect()->route('admin.musics.index') -> with('success', 'Musiqa ochirildi!');
     }
 }
