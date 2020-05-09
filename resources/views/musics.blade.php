@@ -1,4 +1,4 @@
-@extends('layouts/app', ['title' => 'musics'])
+@extends('layouts/app', ['title' => 'Musics'])
 @section('content')
 @foreach ($musics as $music)
 <ul class="list-unstyled ml-5">

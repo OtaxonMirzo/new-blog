@@ -82,8 +82,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="{{ route('media') }}"><i class="lnr lnr-select"></i> <span>Media Css</span></a></li>
 						<li class="menu-list"><a href="#"><i class="lnr lnr-book"></i>  <span>Pages</span></a> 
 							<ul class="sub-menu-list">
-								<li><a href="{{ route('sign_in') }}">Sign In</a> </li>
-								<li><a href="{{ route('sign_up') }}">Sign Up</a></li>
 								<li><a href="{{ route('blank_page') }}">Blank Page</a></li>
 							</ul>
 						</li>
@@ -255,6 +253,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</ul>
 							</li>		   							   		
 							<div class="clearfix"></div>	
+							<form action="{{ route('logout') }}" method="post">
+								@csrf 
+								<button class="btn-primary" type="submit"> Logout </button>
+							</form>
 						</ul>
 					</div>
 					<div class="profile_details">		

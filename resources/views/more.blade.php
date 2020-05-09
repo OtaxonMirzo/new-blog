@@ -1,4 +1,4 @@
-@extends('layouts/app', ['title' => 'more'])
+@extends('layouts/app', ['title' => 'More'])
 @section('content')
     	<!-- more -->
 	<section class="about-w3ls pt-md-5 pt-3" id="more">

@@ -8,9 +8,9 @@
         <p>
             {{ $musics->lyric }}
         </p>
-        <h5>
+        <h4>
             {{ $musics->created_at->format('H:i d/m/Y') }} <br>
             {{ $musics->updated_at->format('H:i d/m/Y') }}
-        </h5>
+        </h4>
 </div>
 @endsection

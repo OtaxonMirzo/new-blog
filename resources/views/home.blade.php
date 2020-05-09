@@ -1,4 +1,4 @@
-@extends('layouts/app', ['title' => 'home'])
+@extends('layouts/app', ['title' => 'Home page'])
 @section('content')
     	<!-- banner -->
 	<div class="banner" id="home">

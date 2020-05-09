@@ -1,4 +1,4 @@
-@extends('layouts/app', ['title' => 'musicsmore'])
+@extends('layouts/app', ['title' => '{{ $musics->id }}'])
 @section('content')
     <div class="card mb-3">
       <img src="..." class="card-img-top" alt="...">

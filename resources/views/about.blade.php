@@ -1,4 +1,4 @@
-@extends('layouts/app', ['title' => 'about'])
+@extends('layouts/app', ['title' => 'About'])
 @section('content')
     	<!-- about-->
 	<section class="wthree-row" id="about">

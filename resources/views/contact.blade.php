@@ -1,4 +1,4 @@
-@extends('layouts/app', ['title' => 'contact'])
+@extends('layouts/app', ['title' => 'Contact'])
 @section('content')
     	<!-- contact top -->
 	<div class="contact-top text-center">
