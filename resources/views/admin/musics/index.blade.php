@@ -31,19 +31,20 @@
                     <td> {{ $music->name }} </td>
                     <td> {{ $music->duration }} </td>
                     <td>
-                        <a href="{{route('admin.musics.show', $music->id)}}" class="btn btn-sm btn-info text-white float-left"> <i class="fa fa-eye" aria-hidden="true"></i> </a>
-                        <a class="btn btn-sm btn-default float-left" href="{{ route('admin.musics.edit', ['id' => $music->id]) }}">
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                        <a href="{{route('admin.musics.show', $music->id)}}" role="button" class="btn btn-sm text-white float-left"> <i class="fa fa-eye"></i> </a>
+                        <a class="btn btn-sm btn-outline-dark float-left" role="button" href="{{ route('admin.musics.edit', ['id' => $music->id]) }}">
+                            <i class="fa fa-pencil"></i>
                         </a>
                         <form method="POST" action="{{ route('admin.musics.destroy', ['id' => $music->id]) }}">
                             @csrf
                             @method('delete')
-                            <button type="submit" class="btn btn-sm btn-danger"> <i class="fa fa-trash-o" aria-hidden="true"></i> </button>
+                            <button type="submit" class="btn float-right btn-sm btn-danger"> <i class="fa fa-trash-o"></i> </button>
                         </form>
                     </td>
                 </tr>
-            @endforeach
-      </tbody>
-    </table>
+                @endforeach
+            </tbody>
+        </table>
+        {{ $musics->links() }}
    </div>
 @endsection

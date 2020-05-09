@@ -15,8 +15,10 @@ class MusicsController extends Controller
      */
     public function index()
     {
-        $musics = Music::all();
-        return view('admin.musics.index', compact('musics'));
+        $page_size = env('ADMIN_PAGE_SIZE', 15);
+        $musics = Music::latest()->paginate($page_size);
+        $links = $musics->links();
+        return view('admin.musics.index', compact('musics', 'links'));
     }
 
     /**
